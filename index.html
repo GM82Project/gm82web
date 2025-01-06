@@ -23,14 +23,6 @@
             background-color: #793b9c
         }
         
-        .maindiv{
-            max-width: 800px;
-            margin: 0 auto;
-            border-style: none;
-            border-width: 0px;
-            padding: 0px;
-        }
-        
         button,div{
             border-style: solid;
             border-width: 4px;
@@ -41,6 +33,21 @@
         }
         div{
             padding: 4px;
+        }
+        
+        .maindiv{
+            max-width: 800px;
+            margin: 0 auto;
+            border-style: none;
+            border-width: 0px;
+            padding: 0px;
+        }
+        .maintabs{
+            border-style: none;
+            border-width: 0px;
+            padding: 0px;            
+            padding-top:4px;
+            padding-left:4px;
         }
         
         button{
@@ -85,16 +92,24 @@
     <body>
         <div class="maindiv">
             <div class="purple">8.2 Project</div>
-            <div class="maindiv" id="Tabs"></div>
+            <div class="maintabs" id="Tabs"></div>
             <div class="tabdiv" id="News">
                 <button>Button</button>
                 <br>
                 A paragraph consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words
             </div>
             <div class="tabdiv" id="Downloads">
-                <button>Button</button>
-                <br>
+                <button>Download</button>
                 Downloads page welcome to the dfownloads page here you can download the down loads
+            </div>
+            <div class="tabdiv" id="Source Code">
+                sauce plz
+            </div>
+            <div class="tabdiv" id="Documentation">
+                documentation
+            </div>
+            <div class="tabdiv" id="Links">
+                links
             </div>
         </div>
     </body>
@@ -114,7 +129,7 @@
                 
                 
         //focus initial tab
-        const focustab = window.location.hash;        
+        const focustab = decodeURI(window.location.hash);        
         if (focustab) {        
             for (let i = 0; i < tab_buttons.length; i++) {
                 if ("#"+tab_buttons[i].innerText == focustab) {select_tab(tab_buttons[i]); break;}
