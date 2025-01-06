@@ -46,6 +46,10 @@ header time {
     margin-left: auto;
 }
 
+html {
+    background-image: url("images/black.PNG");
+}
+
 body {
     max-width: 800px;
     margin: 0 auto;
@@ -70,6 +74,9 @@ a.button {
     padding-left:4px;
     padding-right:4px;
 	text-decoration: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
 }
 
 a.button:active {
