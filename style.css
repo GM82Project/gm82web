@@ -1,22 +1,35 @@
-*{
+body, a.button {
+    background-color: #444;
     font: 14px "Courier New",serif;
     font-weight: bold;
     color: #fff;
 }
-body,div,button{
-    background-color: #444;
-}
-.purple{
+
+h1, header, main h2 {
     background-color: #793b9c;
 }
 
-.separator{
+h1 {
+	font-size: 200%;
+}
+
+h2 {
+	font-size: inherit;
+	margin: inherit;
+}
+
+.separator {
     height:4px;
     border-style: none;
     padding: 0px; 
 }
 
-button,div{
+.buttonholder {
+	display: flex;
+}
+
+a.button, header, section > h2 {
+	display: block;
     border-style: solid;
     border-width: 4px;
     border-left-color: #676;
@@ -24,18 +37,25 @@ button,div{
     border-right-color: #232;
     border-bottom-color: #232;
 }
-div{
-    padding: 4px;
+
+main header {
+    display: flex;
 }
 
-.maindiv{
+header time {
+    margin-left: auto;
+}
+
+body {
     max-width: 800px;
     margin: 0 auto;
     border-style: none;
     border-width: 0px;
     padding: 0px;
 }
-.maintabs{
+
+nav {
+	display: flex;
     border-style: none;
     border-width: 0px;
     padding: 0px;            
@@ -43,14 +63,16 @@ div{
     padding-left:4px;
 }
 
-button{
+a.button {
     height:28px;
     padding-top:1px;            
     padding-bottom:1px;
     padding-left:4px;
     padding-right:4px;
+	text-decoration: none;
 }
-button:active{
+
+a.button:active {
     padding-top:2px;
     padding-bottom:0px;
     padding-left:5px;
@@ -61,32 +83,45 @@ button:active{
     border-bottom-color: #676;
 }
 
-.buticon{
+.buticon {
     float:left;
     margin-right:4px;
 }
 
-.tab{
+a.tab {
     border-bottom: 0px;
 }
-.tab:active{
+
+a.tab:active {
     padding-top:1px;            
     padding-bottom:1px;
     padding-left:4px;
     padding-right:4px;
 }
-.activetab{
+
+a.activetab {
     border-bottom: 0px;
     border-left-color: #232;
     border-top-color: #232;
     border-right-color: #676;
     border-bottom-color: #676;
 }
-.tabdiv{
+
+main {
     display: none;
 }
 
-iframe{
+body {
+    padding: 4px;
+    border-style: solid;
+    border-width: 4px;
+    border-left-color: #676;
+    border-top-color: #676;
+    border-right-color: #232;
+    border-bottom-color: #232;
+}
+
+iframe {
     width:776px;
     height:640px;
     border-style: solid;

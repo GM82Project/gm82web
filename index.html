@@ -12,64 +12,71 @@
     </head>
 
     <body>
-        <div class="maindiv">
-            <div class="purple">8.2 Project</div>
-            <div class="maintabs" id="Tabs"></div>
-            <div class="tabdiv" id="News">
-                <div class="purple">Website Launched<span style="float:right">06 Jan 2025</span></div>
-                <div>
-                    Today we're launching the official 8.2 Project Website!<br><br>We've been cooking something for a while and we think it's ready for public preview.
-                </div>
-                <div class="separator"></div>
-                <div class="purple">Merry Christmas!<span style="float:right">25 Dec 2024</span></div>
-                <div>
-                    And a happy new year.
-                </div>
-            </div>
-            <div class="tabdiv" id="Downloads">
-                <div class="purple">Setup Wizard</div>
-                <div>
-                    <button onclick="new_tab('files/8.2_Setup.exe')"><img class="buticon" src="images/nsis.png"/>Download Setup Wizard</button>
-                    This is the recommended download.
-                    <br><br>
-                    Installs 8.2, the required Visual C Runtimes, Examples, Documentation, the new 8.2 Room Editor, the Model Viewer tool, and both Video Encoder and Video Player tools.
-                </div>
-                <div class="separator"></div>
-                <div class="purple">Portable Version</div>
-                <div>
-                    <button onclick="new_tab('files/8.2_Portable.7z')"><img class="buticon" src="images/7z.png"/>Download Portable</button>
-                    Get the program files directly.
-                    <br><br>
-                    Note that you'll need to manually associate any of the included tools, install or update your Visual C Runtime as needed, the recommended font and color scheme aren't set, and the program will still use the Windows Registry to store preferences.
-                </div>
-            </div>
-            <div class="tabdiv" id="Source Code">
-                <div class="purple">GitHub Organization</div>
-                <div>
-                    We have a GitHub org where we store all the source code used to create the various extensions and components for the 8.2 Project.
-                    <br><br>
-                    <button onclick="new_tab('https://github.com/GM82Project')"><img class="buticon" src="images/github.png"/>8.2 Project on GitHub</button>
-                </div>
-                <div class="separator"></div>
-                <div class="purple">Personal Repositories</div>
-                <div>
-                    Various legacy or satellite components of the Project are stored on our personal GitHub pages. You can find links to those below.
-                    <br><br>
-                    <button onclick="new_tab('https://github.com/omicronrex?tab=repositories')"><img class="buticon" src="images/github.png"/>renex</button>
-                    <button onclick="new_tab('https://github.com/skyfloogle?tab=repositories')"><img class="buticon" src="images/github.png"/>Floogle</button>
-                </div>
-            </div>
-            <div class="tabdiv" id="Documentation">
-                <button onclick="doc_back()"><img class="buticon" src="images/back.png"/>Back</button>
-                <button onclick="doc_fwd()"><img class="buticon" src="images/forward.png"/>Forward</button>
-                <button onclick="doc_home()"><img class="buticon" src="images/home.png"/>Home</button>
-                <div class="separator"></div>
-                <iframe src="help/index.html" id="documentation"></iframe>
-            </div>
-            <div class="tabdiv" id="Links">
-                links
-            </div>
-        </div>
+		<h1>8.2 Project</h1>
+		<nav class="maintabs" id="Tabs"></nav>
+		<main class="tabdiv" id="News">
+			<article>
+				<header>
+					<h2>Website Launched</h2>
+					<time datetime="2025-01-06">06 Jan 2025</time>
+				</header>
+				<p>Today we're launching the official 8.2 Project Website!</p>
+				<p>We've been cooking something for a while and we think it's ready for public preview.</p>
+			</article>
+			<article>
+				<header>
+					<h2>Merry Christmas!</h2>
+					<time datetime="2024-12-25">25 Dec 2024</time>
+				</header>
+				<p>And a happy new year.</p>
+			</article>
+		</main>
+		<main class="tabdiv" id="Downloads">
+			<section>
+				<h2>Setup Wizard</h2>
+				<p class="buttonholder">
+					<a class="button" href="files/8.2_Setup.exe"><img class="buticon" src="images/setup.png"/>Download Setup Wizard</a>
+					This is the recommended download.
+				</p>
+				<p>
+					Installs 8.2, the required Visual C Runtimes, Examples, Documentation, the new 8.2 Room Editor, the Model Viewer tool, and both Video Encoder and Video Player tools.
+				</p>
+			</section>
+			<section>
+				<h2>Portable Version</h2>
+				<p class="buttonholder">
+					<a class="button" href="files/8.2_Portable.7z"><img class="buticon" src="images/7z.png"/>Download Portable</a>
+					Get the program files directly.
+				</p>
+				<p>
+					Note that you'll need to manually associate any of the included tools, install or update your Visual C Runtime as needed, the recommended font and color scheme aren't set, and the program will still use the Windows Registry to store preferences.
+				</p>
+			</section>
+		</main>
+		<main class="tabdiv" id="Source Code">
+			<section>
+				<h2>GitHub Organization</h2>
+				<p>
+					We have a GitHub org where we store all the source code used to create the various extensions and components for the 8.2 Project.
+				</p>
+				<p class="buttonholder">
+					<a class="button" href="https://github.com/GM82Project"><img class="buticon" src="images/github.png"/>8.2 Project on GitHub</a>
+				</p>
+			</section>
+			<section>
+				<h2>Personal Repositories</h2>
+				<p>
+					Various legacy or satellite components of the Project are stored on our personal GitHub pages. You can find links to those below.
+				</p>
+				<p class="buttonholder">
+					<a class="button" href="https://github.com/omicronrex?tab=repositories"><img class="buticon" src="images/github.png"/>renex</a>
+					<a class="button" href="https://github.com/skyfloogle?tab=repositories"><img class="buticon" src="images/github.png"/>Floogle</a>
+				</p>
+			</section>
+		</main>
+		<main class="tabdiv" id="Links">
+			links
+		</main>
     </body>
     
     <script type="text/javascript" src="script.js"></script>
