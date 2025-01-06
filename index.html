@@ -64,12 +64,14 @@
         .tab{
             border-bottom: 0px;
         }
-        .activetab{
-            border-bottom: 0px;
+        .tab:active{
             padding-top:1px;            
             padding-bottom:1px;
             padding-left:4px;
             padding-right:4px;
+        }
+        .activetab{
+            border-bottom: 0px;
             border-left-color: #232;
             border-top-color: #232;
             border-right-color: #676;
@@ -104,7 +106,7 @@
         for (let i = 0; i < tab_divs.length; i++) {
             var button = document.createElement("button");
             button.className="tab";
-            button.onclick=function(){select_tab(this)};
+            button.onclick=function(){select_tab(this);};
             button.innerText=tab_divs[i].id;
             tab_bar.appendChild(button);
         }        
