@@ -5,17 +5,32 @@
         <meta http-equiv="pragma" content="no-cache">
         <meta http-equiv="expires" content="-1">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="darkreader-lock">
         <link rel="icon" type="image/png" href="favicon.png">
         <title>8.2 Project</title>
     </head>
 
     <style type="text/css">
         *{
-            background-color: #444;
             font: 14px "Courier New",serif;
             font-weight: bold;
             color: #fff;
         }
+        body,div,button{
+            background-color: #444;
+        }
+        .purple{
+            background-color: #793b9c
+        }
+        
+        .maindiv{
+            max-width: 800px;
+            margin: 0 auto;
+            border-style: none;
+            border-width: 0px;
+            padding: 0px;
+        }
+        
         button,div{
             border-style: solid;
             border-width: 4px;
@@ -27,25 +42,83 @@
         div{
             padding: 4px;
         }
+        
+        button{
+            height:28px;
+            padding-top:1px;            
+            padding-bottom:1px;
+            padding-left:4px;
+            padding-right:4px;
+        }
         button:active{
             padding-top:2px;
+            padding-bottom:0px;
             padding-left:5px;
             padding-right:3px;
-            padding-bottom:0px;
             border-left-color: #232;
             border-top-color: #232;
             border-right-color: #676;
             border-bottom-color: #676;
         }
-        .maindiv{
-            max-width: 800px;
-            margin: 0 auto;
+        
+        .tab{
+            border-bottom: 0px;
+        }
+        .tab:active{
+            padding-top:1px;            
+            padding-bottom:1px;
+            padding-left:4px;
+            padding-right:4px;
+        }
+        .tabdiv{
+            display: none;
         }
     </style>
 
     <body>
         <div class="maindiv">
-        <button>Button</button>
+            <div class="purple">8.2 Project</div>
+            <div class="maindiv" id="Tabs"></div>
+            <div class="tabdiv" id="News">
+                <button>Button</button>
+                <br>
+                A paragraph consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words
+            </div>
+            <div class="tabdiv" id="Downloads">
+                <button>Button</button>
+                <br>
+                Downloads page welcome to the dfownloads page here you can download the down loads
+            </div>
         </div>
     </body>
+    
+    <script type="text/javascript">
+        const collection = document.getElementsByClassName("tabdiv");
+        
+        //tab switch function
+        function select(self) {
+            window.location.hash = "#"+self.innerText;
+            for (let i = 0; i < collection.length; i++) {
+                if (collection[i].id == self.innerText) collection[i].style.display = "block";
+                else collection[i].style.display = "none";
+            }
+        }
+        
+        //on load:
+        
+        //add tabs for each tab div
+        var tabs = document.getElementById("Tabs");
+        for (let i = 0; i < collection.length; i++) {
+            tabs.innerHTML+="<button class=\"tab\" onclick=\"select(this)\">"+collection[i].id+"</button>";
+        }
+        
+        //focus hashtag tab
+        var focustab = window.location.hash;        
+        if (focustab) {        
+            for (let i = 0; i < collection.length; i++) {
+                if ("#"+collection[i].id == focustab) collection[i].style.display = "block";
+                else collection[i].style.display = "none";
+            }
+        } else collection[0].style.display = "block"        
+    </script>
 </html>
