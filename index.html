@@ -6,107 +6,65 @@
         <meta http-equiv="expires" content="-1">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="darkreader-lock">
-        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="stylesheet" href="style.css">        
         <title>8.2 Project</title>
     </head>
-
-    <style type="text/css">
-        *{
-            font: 14px "Courier New",serif;
-            font-weight: bold;
-            color: #fff;
-        }
-        body,div,button{
-            background-color: #444;
-        }
-        .purple{
-            background-color: #793b9c
-        }
-        
-        button,div{
-            border-style: solid;
-            border-width: 4px;
-            border-left-color: #676;
-            border-top-color: #676;
-            border-right-color: #232;
-            border-bottom-color: #232;
-        }
-        div{
-            padding: 4px;
-        }
-        
-        .maindiv{
-            max-width: 800px;
-            margin: 0 auto;
-            border-style: none;
-            border-width: 0px;
-            padding: 0px;
-        }
-        .maintabs{
-            border-style: none;
-            border-width: 0px;
-            padding: 0px;            
-            padding-top:4px;
-            padding-left:4px;
-        }
-        
-        button{
-            height:28px;
-            padding-top:1px;            
-            padding-bottom:1px;
-            padding-left:4px;
-            padding-right:4px;
-        }
-        button:active{
-            padding-top:2px;
-            padding-bottom:0px;
-            padding-left:5px;
-            padding-right:3px;
-            border-left-color: #232;
-            border-top-color: #232;
-            border-right-color: #676;
-            border-bottom-color: #676;
-        }
-        
-        .tab{
-            border-bottom: 0px;
-        }
-        .tab:active{
-            padding-top:1px;            
-            padding-bottom:1px;
-            padding-left:4px;
-            padding-right:4px;
-        }
-        .activetab{
-            border-bottom: 0px;
-            border-left-color: #232;
-            border-top-color: #232;
-            border-right-color: #676;
-            border-bottom-color: #676;
-        }
-        .tabdiv{
-            display: none;
-        }
-    </style>
 
     <body>
         <div class="maindiv">
             <div class="purple">8.2 Project</div>
             <div class="maintabs" id="Tabs"></div>
             <div class="tabdiv" id="News">
-                <button>Button</button>
-                <br>
-                A paragraph consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words consisting of many words
+                <div class="purple">Website Launched<span style="float:right">06 Jan 2025</span></div>
+                <div>
+                    Today we're launching the official 8.2 Project Website!<br><br>We've been cooking something for a while and we think it's ready for public preview.
+                </div>
+                <div class="separator"></div>
+                <div class="purple">Merry Christmas!<span style="float:right">25 Dec 2024</span></div>
+                <div>
+                    And a happy new year.
+                </div>
             </div>
             <div class="tabdiv" id="Downloads">
-                <button>Download</button>
-                Downloads page welcome to the dfownloads page here you can download the down loads
+                <div class="purple">Setup Wizard</div>
+                <div>
+                    <button onclick="new_tab('files/8.2_Setup.exe')"><img class="buticon" src="images/nsis.png"/>Download Setup Wizard</button>
+                    This is the recommended download.
+                    <br><br>
+                    Installs 8.2, the required Visual C Runtimes, Examples, Documentation, the new 8.2 Room Editor, the Model Viewer tool, and both Video Encoder and Video Player tools.
+                </div>
+                <div class="separator"></div>
+                <div class="purple">Portable Version</div>
+                <div>
+                    <button onclick="new_tab('files/8.2_Portable.7z')"><img class="buticon" src="images/7z.png"/>Download Portable</button>
+                    Get the program files directly.
+                    <br><br>
+                    Note that you'll need to manually associate any of the included tools, install or update your Visual C Runtime as needed, the recommended font and color scheme aren't set, and the program will still use the Windows Registry to store preferences.
+                </div>
             </div>
             <div class="tabdiv" id="Source Code">
-                sauce plz
+                <div class="purple">GitHub Organization</div>
+                <div>
+                    We have a GitHub org where we store all the source code used to create the various extensions and components for the 8.2 Project.
+                    <br><br>
+                    <button onclick="new_tab('https://github.com/GM82Project')"><img class="buticon" src="images/github.png"/>8.2 Project on GitHub</button>
+                </div>
+                <div class="separator"></div>
+                <div class="purple">Personal Repositories</div>
+                <div>
+                    Various legacy or satellite components of the Project are stored on our personal GitHub pages. You can find links to those below.
+                    <br><br>
+                    <button onclick="new_tab('https://github.com/omicronrex?tab=repositories')"><img class="buticon" src="images/github.png"/>renex</button>
+                    <button onclick="new_tab('https://github.com/skyfloogle?tab=repositories')"><img class="buticon" src="images/github.png"/>Floogle</button>
+                </div>
             </div>
             <div class="tabdiv" id="Documentation">
-                documentation
+                <button onclick="doc_back()"><img class="buticon" src="images/back.png"/>Back</button>
+                <button onclick="doc_fwd()"><img class="buticon" src="images/forward.png"/>Forward</button>
+                <button onclick="doc_home()"><img class="buticon" src="images/home.png"/>Home</button>
+                <div class="separator"></div>
+                <iframe src="help/index.html" id="documentation"></iframe>
             </div>
             <div class="tabdiv" id="Links">
                 links
@@ -114,39 +72,5 @@
         </div>
     </body>
     
-    <script type="text/javascript">
-        //add tab buttons for each tab div
-        const tab_divs = document.getElementsByClassName("tabdiv");
-        const tab_bar = document.getElementById("Tabs");
-        for (let i = 0; i < tab_divs.length; i++) {
-            var button = document.createElement("button");
-            button.className="tab";
-            button.onclick=function(){select_tab(this);};
-            button.innerText=tab_divs[i].id;
-            tab_bar.appendChild(button);
-        }        
-        const tab_buttons = document.getElementsByClassName("tab");            
-                
-                
-        //focus initial tab
-        const focustab = decodeURI(window.location.hash);        
-        if (focustab) {        
-            for (let i = 0; i < tab_buttons.length; i++) {
-                if ("#"+tab_buttons[i].innerText == focustab) {select_tab(tab_buttons[i]); break;}
-            }
-        } else select_tab(tab_buttons[0]);
-        
-        
-        //tab switch function
-        function select_tab(self) {
-            window.location.hash = "#"+self.innerText;
-            var last = (document.getElementsByClassName("activetab"))[0];
-            if (last) last.className="tab";
-            self.className="activetab";
-            for (let i = 0; i < tab_divs.length; i++) {
-                if (tab_divs[i].id == self.innerText) tab_divs[i].style.display = "block";
-                else tab_divs[i].style.display = "none";
-            }
-        }
-    </script>
+    <script type="text/javascript" src="script.js"></script>
 </html>

@@ -1,0 +1,99 @@
+*{
+    font: 14px "Courier New",serif;
+    font-weight: bold;
+    color: #fff;
+}
+body,div,button{
+    background-color: #444;
+}
+.purple{
+    background-color: #793b9c;
+}
+
+.separator{
+    height:4px;
+    border-style: none;
+    padding: 0px; 
+}
+
+button,div{
+    border-style: solid;
+    border-width: 4px;
+    border-left-color: #676;
+    border-top-color: #676;
+    border-right-color: #232;
+    border-bottom-color: #232;
+}
+div{
+    padding: 4px;
+}
+
+.maindiv{
+    max-width: 800px;
+    margin: 0 auto;
+    border-style: none;
+    border-width: 0px;
+    padding: 0px;
+}
+.maintabs{
+    border-style: none;
+    border-width: 0px;
+    padding: 0px;            
+    padding-top:4px;
+    padding-left:4px;
+}
+
+button{
+    height:28px;
+    padding-top:1px;            
+    padding-bottom:1px;
+    padding-left:4px;
+    padding-right:4px;
+}
+button:active{
+    padding-top:2px;
+    padding-bottom:0px;
+    padding-left:5px;
+    padding-right:3px;
+    border-left-color: #232;
+    border-top-color: #232;
+    border-right-color: #676;
+    border-bottom-color: #676;
+}
+
+.buticon{
+    float:left;
+    margin-right:4px;
+}
+
+.tab{
+    border-bottom: 0px;
+}
+.tab:active{
+    padding-top:1px;            
+    padding-bottom:1px;
+    padding-left:4px;
+    padding-right:4px;
+}
+.activetab{
+    border-bottom: 0px;
+    border-left-color: #232;
+    border-top-color: #232;
+    border-right-color: #676;
+    border-bottom-color: #676;
+}
+.tabdiv{
+    display: none;
+}
+
+iframe{
+    width:776px;
+    height:640px;
+    border-style: solid;
+    border-width: 4px;
+    border-left-color: #232;
+    border-top-color: #232;
+    border-right-color: #676;
+    border-bottom-color: #676;
+    margin-bottom:-4px;
+}
