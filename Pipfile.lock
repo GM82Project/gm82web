@@ -1,0 +1,30 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "96660ce7565b15f169150a92f7eaeec095c2bb2b403b8dadba38cc6c8be15a74"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.13"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "mistletoe": {
+            "hashes": [
+                "sha256:1630f906e5e4bbe66fdeb4d29d277e2ea515d642bb18a9b49b136361a9818c9d",
+                "sha256:44a477803861de1237ba22e375c6b617690a31d2902b47279d1f8f7ed498a794"
+            ],
+            "index": "pypi",
+            "markers": "python_version ~= '3.5'",
+            "version": "==1.4.0"
+        }
+    },
+    "develop": {}
+}
