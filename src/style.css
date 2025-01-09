@@ -1,3 +1,10 @@
+@font-face {
+    font-family: Jetbrains;
+    src: local("Jetbrains"),
+    url("fonts/JetBrainsMono-Regular.ttf") format("truetype"),
+    font-display: swap;
+}
+
 
 html {
     background-image: url("images/black.PNG");
@@ -18,8 +25,7 @@ body {
 
 body, a.button {
     background-color: #444;
-    font: 14px "Courier New",serif;
-    font-weight: bold;
+    font: 14px "Jetbrains",serif;
     color: #fff;
 }
 
@@ -29,6 +35,7 @@ h1, header, main h2 {
     line-height: 1.5em;    
     padding-left: 0.2em;
     padding-right: 0.2em;
+    font-weight: normal;
 }
 
 h1 {
@@ -69,7 +76,7 @@ nav {
     border-style: none;
     border-width: 0px;
     padding: 0px;            
-    padding-top:4px;
+    padding-top:35px;
     padding-left:4px;
 }
 
