@@ -12,7 +12,7 @@ from mistletoe.html_renderer import HtmlRenderer
 from mistletoe.span_token import RawText
 
 POST_FILENAME_GLOB = "posts/*/*/*/*.md"
-POST_FILENAME_REGEX = r"posts[\\/](\d{4})[\\/](\d\d)[\\/](\d\d)/[^\\/]+\.md"
+POST_FILENAME_REGEX = r"posts[\\/](\d{4})[\\/](\d\d)[\\/](\d\d)[\\/][^\\/]+\.md"
 NEWS_PLACEHOLDER = '<!-- NEWS PLACEHOLDER -->'
 SRC_DIR = Path('src')
 DIST_DIR = Path('dist')
