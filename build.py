@@ -13,8 +13,7 @@ from mistletoe.span_token import RawText
 
 POST_FILENAME_GLOB = "posts/*/*/*/*.md"
 POST_FILENAME_REGEX = r"posts/(\d{4})/(\d\d)/(\d\d)/[^/]+\.md"
-NEWS_START = '<main class="tabdiv" id="News">'
-NEWS_END = '</main>'
+NEWS_PLACEHOLDER = '<!-- NEWS PLACEHOLDER -->'
 SRC_DIR = Path('src')
 DIST_DIR = Path('dist')
 INDEX_HTML = 'index.html'
@@ -63,9 +62,9 @@ def insert_posts():
     posts = generate_posts()
     with open(DIST_DIR / INDEX_HTML) as f:
         html = f.read()
-    if NEWS_START + NEWS_END not in html:
-        print("News section changed, update the script!")
-    html = html.replace(NEWS_START + NEWS_END, NEWS_START + ''.join(posts) + NEWS_END)
+    if NEWS_PLACEHOLDER not in html:
+        raise RuntimeError("news placeholder not found")
+    html = html.replace(NEWS_PLACEHOLDER, ''.join(posts))
     with open(DIST_DIR / INDEX_HTML, "w") as f:
         f.write(html)
 
