@@ -30,8 +30,7 @@ nav {
     border-style: none;
     border-width: 0px;
     padding: 0px;            
-    padding-top:40px;
-    padding-left:4px;
+    padding-top:36px;
 }
 
 /*the thingy under the tabs*/
@@ -40,8 +39,7 @@ nav {
     margin-top: 0px;
     margin-bottom:4px;  
     height:1.5em;
-    line-height: 1.5em;   
-    padding-left: 97px;
+    line-height: 1.5em;
     padding-right: 0.2em;
     font-weight: normal;    
 }
