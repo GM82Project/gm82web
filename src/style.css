@@ -46,7 +46,7 @@ nav {
 }
 
 /* global button styling */
-a.button, header, section > h2, .mainhead {
+a.button, header, section > h2, .mainhead, .avatar {
     border-style: solid;
     border-width: 4px;
     border-left-color: #676;
@@ -94,8 +94,18 @@ h2 {
 
 p {
     margin-top:4px;
-    margin-bottom:8px;
+    margin-bottom:8px;    
+    padding-left:4px;
     vertical-align: middle;
+}
+
+list {
+    display: block;
+    margin-bottom: 10px;
+}
+
+li {
+    margin-left: 16px;
 }
 
 a.button {    
@@ -109,6 +119,16 @@ a.button {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.discord {  
+    border-style: solid;
+    border-width: 4px;  
+    border-left-color: #232;
+    border-top-color: #232;
+    border-right-color: #676;
+    border-bottom-color: #676;
+    margin-bottom:1px;
 }
 
 a.button:active {

@@ -12,29 +12,84 @@
     </head>
 
     <body>
-		<img src="images/gm82_96.png" style="float: left; image-rendering: pixelated;"/>
+		<img src="images/gm82.png" style="float:left; image-rendering:pixelated;"/>
 		<nav class="maintabs" id="Tabs">
-            <img src="images/header.png" style="height: 21px; image-rendering: pixelated;"/>        
+            <img src="images/header.png" style="height:21px; image-rendering:pixelated;"/>        
         </nav>
-        <h2 class="mainhead">A community-driven improvement patch for Legacy Game Maker 8.1</h2>
+        <h2 class="mainhead">A community-driven update for Legacy Game Maker 8.1</h2>
 		<main class="tabdiv" id="News">
 			<!-- NEWS PLACEHOLDER -->
+		</main>
+        <main class="tabdiv" id="About">
+			<section>
+				<h2>What is 8.2?</h2>
+                    <p>8.2 is an unofficial, unendorsed, open-source improvement patch for Game Maker 8.1 that we have been chipping away at since 2019. Main changes include:</p>
+                    <br>
+                    <list>
+                        <li>New gm82 plaintext file format suitable for source-control and external tools</li>
+                        <li>New room editor designed from the ground up with dozens of new features</li>
+                        <li>Fields, a new visual way to use type-checked creation code with the new room editor</li>
+                        <li>File watcher to allow quick reloading from disk when using source control</li>
+                        <li>Many improvements to the basic IDE layout and functionality</li>
+                        <li>New ability to swap the order of create events and instance creation code</li>
+                        <li>New drag-and-drop actions for Draw Self, User Event, Inherited Event and Inherit Object</li>
+                        <li>Option for setting the default room settings when adding rooms</li>
+                        <li>Re-added support for Bitmap fonts in the IDE and games</li>
+                        <li>Improved performance significantly when saving and loading projects</li>
+                        <li>Improved test run times: we measured 600% faster testing in some projects</li>
+                        <li>Improved compression of game data (around 5-10%)</li>
+                        <li>Dozens of custom-built native extensions extending the functionality of the Game Runner</li>
+                        <li>Removed one frame of in-game input lag</li>
+                        <li>Removed unnecessary DirectPlay installation prompt in Windows 10</li>
+                        <li>Fixed memory leak in the image editor that causes a crash after some time</li>
+                        <li>Fixed massive Game slowdowns when joysticks are disconnected from the system</li>
+                        <li>Fixed Game slowdowns and stuttering on Windows 10 by adjusting the thread scheduler</li>
+                        <li>Fixed IDE access violations and unpredictable corruption of program files</li>
+                        <li>Fixed foreign text turning into mojibake when loading a v8.0 gmk file</li>
+                        <li>Fixed Games crashing when the computer is locked</li>
+                        <li>Fixed the IDE and Games running out of memory too early</li>
+                    </list>
+                    <br>
+                <h2>The Team behind 8.2</h2>
+                    <table>
+                        <tr><td><img class="avatar" src="images/floogle.png"/></td><td>Floogle<br>IDE and Runner Reverse Engineer, Extension Programmer, Tool Programmer</p></td></tr>
+                        <tr><td><img class="avatar" src="images/renex.png"/></td><td>renex<br>Extension Programmer, UI Designer, Tool Programmer</p></td></tr>
+                    </table>
+                    <br>
+                <h2>The new 8.2 Extensions and Tools</h2>
+                    <p>As part of the project, we have a collection of extensions and tools built in GML and C++ to extend the capabilities of the Game Runner. Here's a primer:</p>
+                    <br>
+                    <list>
+                        <li><img class="buticon" src="images/alpha.ico"/>Alpha<br>Apply transparency effects to the Game Window. Supports color-key and direct alpha mode.<br>&nbsp;</li>
+                        <li><img class="buticon" src="images/anvil.ico"/>Anvil<br>Shader Linter and Compiler for DX9. Supports Studio-like GLSL, ShaderToy and HLSL9. Requires DirectX 9, and outputs ready-to-use code and packed shaders.<br>&nbsp;</li>
+                        <li><img class="buticon" src="images/audio.ico"/>Audio<br>New sound extension based on Cute Framework. Supports Wav and Ogg formats with sound instance control and automatic music fading options. You can also use builtin Sound Resources added through the IDE.<br>&nbsp;</li>
+                        <li><img class="buticon" src="images/chunk.ico"/>Chunk<br>Load parts of rooms saved to chunk files using the New Room Editor.<br>&nbsp;</li>
+                        <li><img class="buticon" src="images/console.ico"/>Console<br>Open and manipulate a real Console Window, with extensive input and mode support.<br>&nbsp;</li>
+                        <li><img class="buticon" src="images/Core.ico"/>Core<br>Large collection of helper functions, and central solution for running and connecting the other extensions. Most of the 8.2 extensions require Core, and Core also fixes a few buggy built-in functions with invisible replacements.<br>&nbsp;</li>
+                        <li><img class="buticon" src="images/drag.ico"/>Drag<br>Accept files when they're dragged onto the Game Window.<br>&nbsp;</li>
+                        <li><img class="buticon" src="images/dx9.ico"/>DirectX 9<br>Upgrade your game's visuals with Shader Programs and fast Vertex Buffer support.<br>&nbsp;</li>
+                        <li><img class="buticon" src="images/gex.ico"/>GEX<br>Tools for automatically building and installing Extensions, used for rapid development.<br>&nbsp;</li>
+                        <li><img class="buticon" src="images/gltf.ico"/>GLTF<br>Load and render complex animated GLTF models with ease in your 3D games using DirectX 9.<br>&nbsp;</li>
+                        <li><img class="buticon" src="images/joy.ico"/>Joystick<br>Wrapper for SDL2 Joystick. Replaces the builtin functions with a much more powerful api, with support for up to 16 concurrent joysticks of almost any model.<br>&nbsp;</li>
+                        <li><img class="buticon" src="images/live.ico"/>Live<br>Edit rooms in realtime using a live connection to the New Room Editor.<br>&nbsp;</li>
+                        <li><img class="buticon" src="images/net.ico"/>Network<br>Handle Memory Buffers and TCP/UDP Sockets. Also supports basic HTTP functionality.<br>&nbsp;</li>
+                        <li><img class="buticon" src="images/room.ico"/>Room<br>A new room editor for the gm82 project format with dozens of new features. Required for using the new Fields feature, as well as instance and tile scaling, rotation and blending.<br>&nbsp;</li>
+                        <li><img class="buticon" src="images/snd.ico"/>Sound<br>A FmodEx wrapper extension replacing the builtin sound api with a powerful sound engine with support for dozens of audio formats and advanced realtime effects. Currently stuck in a commercial license limbo, and provided mostly for compatibility with old projects.<br>&nbsp;</li>
+                        <li><img class="buticon" src="images/video.ico"/>Video<br>Add Full Motion Video cutscenes to your Game, with support for multiple video tracks and rendering to surfaces. Includes a Video Encoder tool, and a Video Player for the custom rv2 format.</li>
+                    </list>
+			</section>
 		</main>
 		<main class="tabdiv" id="Downloads">
 			<section>
 				<h2>Setup Wizard</h2>
-                    <p>
-                        <a class="button" href="files/8.2_Setup.exe" target="_blank"><img class="buticon" src="images/setup.png"/>Download Setup Wizard</a>
-                        This is the recommended option.
-                    </p>
+                    <p>This is the recommended option.</p>
+                    <a class="button" href="files/8.2_Setup.exe" target="_blank"><img class="buticon" src="images/setup.png"/>Download Setup Wizard</a>
                     <p>Installs 8.2, the required Visual C Runtimes, Examples, Documentation, the new 8.2 Room Editor, the Model Viewer tool, and both Video Encoder and Video Player tools.</p>
 			</section>
 			<section>
 				<h2>Portable Version</h2>
-                    <p>
-                        <a class="button" href="files/8.2_Portable.7z" target="_blank"><img class="buticon" src="images/7z.png"/>Download Portable</a>
-                        Get the program files directly.
-                    </p>
+                    <p>Get the program files directly.</p>
+                    <a class="button" href="files/8.2_Portable.7z" target="_blank"><img class="buticon" src="images/7z.png"/>Download Portable</a>
                     <p>Note that you'll need to manually associate any of the included tools, install or update your Visual C Runtime as needed, the recommended font and color scheme aren't set, and the program will still use the Windows Registry to store preferences</p>
 			</section>
 		</main>
@@ -53,9 +108,17 @@
 		</main>
 		<main class="tabdiv" id="Links">
 			<section>
+				<h2>Discord</h2>
+                    <p>Join our Discord community for help and support.</p>                
+                    <iframe class="discord" src="https://discord.com/widget?id=838949248589365288&theme=dark" width="792" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>                
 				<h2>Links</h2>
-                
-				<p>Here are some interesting projects created with 8.2.</p>
+                    <p>Here are some interesting projects created with 8.2.</p>
+                    <p>mkf</p>
+                    <p>renex engine (thoink about it)</p>
+                    <p>wannafest</p>
+                    <p>guy remastered</p>
+                    <p>sonic boll</p>
+                    <p>gm8emulator</p>
 			</section>
 		</main>
     </body>
