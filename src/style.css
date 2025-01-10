@@ -14,6 +14,7 @@ html {
 body {        
     max-width: 800px;
     margin: 0 auto;
+    margin-top:24px;
     padding: 4px;
     padding-bottom: 0px;
     border-style: solid;
@@ -36,6 +37,7 @@ nav {
 /*the thingy under the tabs*/
 .mainhead {
     background-color: #000;
+    margin-top: 0px;
     margin-bottom:4px;  
     height:1.5em;
     line-height: 1.5em;   
