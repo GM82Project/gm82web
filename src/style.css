@@ -16,6 +16,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     margin-top:24px;
+    margin-bottom:24px;
     padding: 4px;
     padding-bottom: 0px;
     border-style: solid;
@@ -66,7 +67,7 @@ section {
 
 body, a.button {
     background-color: #444;
-    font: 14px "Jetbrains",serif;
+    font: 14px "Jetbrains","Courier New",monospace;
     color: #fff;
 }
 
