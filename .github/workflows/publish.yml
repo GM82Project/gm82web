@@ -40,7 +40,7 @@ jobs:
           python-version: 3.11
 
       - name: Build site
-        run: pipenv python build.py
+        run: pipenv run python build.py
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
