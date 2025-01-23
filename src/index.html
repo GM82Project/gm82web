@@ -11,16 +11,24 @@
         <title>8.2 Project</title>
     </head>
 
-    <body>
-		<img src="images/gm82.png" style="float:left; image-rendering:pixelated;"/>
-		<nav class="maintabs" id="Tabs">
-            <img src="images/header.png" style="height:21px; image-rendering:pixelated;"/>        
-        </nav>
+    <body onresize='adjust_title();'>
+		<div id="desktop header" style="display:none;">
+            <img src="images/gm82.png" style="float:left; image-rendering:pixelated; position:relative; z-index:3;"/>
+            <img src="images/header.png" style="image-rendering:pixelated; padding-top: 8px; padding-bottom: 5px;"/>            
+        </div>
+        <div id="mobile header">
+            <img src="images/gm82.png" style="display: block; margin-left: auto; margin-right: auto; image-rendering:pixelated;"/>
+            <img src="images/header.png" style="image-rendering:pixelated; display: block; margin-left: auto; margin-right: auto; padding-bottom: 8px;"/>      
+        </div>
+        <nav class="maintabs" id="Tabs"></nav>
         <h2 class="mainhead">A community-driven update for Legacy Game Maker 8.1</h2>
+        <noscript><p>This website requires javascript to control the tabs, and to adjust to a mobile layout.</p></noscript>
 		<main class="tabdiv" id="News">
+        <noscript><h2 class="mainhead">News</h2></noscript>
 			<!-- NEWS PLACEHOLDER -->
 		</main>
         <main class="tabdiv" id="About">
+        <noscript><h2 class="mainhead">About</h2></noscript>
 			<section>
 				<h2>What is 8.2?</h2>
                     <p>8.2 is an unofficial, unendorsed, open-source improvement patch for Game Maker 8.1 that we have been chipping away at since 2019. Main changes include:</p>
@@ -80,6 +88,7 @@
 			</section>
 		</main>
 		<main class="tabdiv" id="Downloads">
+        <noscript><h2 class="mainhead">Downloads</h2></noscript>
 			<section>
 				<h2>Setup Wizard</h2>
                     <p>This is the recommended option.</p>
@@ -93,7 +102,8 @@
                     <p>Note that you'll need to manually associate any of the included tools, install or update your Visual C Runtime as needed, the recommended font and color scheme aren't set, and the program will still use the Windows Registry to store preferences.</p>
 			</section>
 		</main>
-		<main class="tabdiv" id="Source Code">
+		<main class="tabdiv" id="Source">
+        <noscript><h2 class="mainhead">Source</h2></noscript>
 			<section>
 				<h2>GitHub Organization</h2>
                     <p>We have a GitHub org where we store all the source code used to create the various extensions and components for the 8.2 Project.</p>
@@ -107,6 +117,7 @@
 			</section>
 		</main>
 		<main class="tabdiv" id="Links">
+        <noscript><h2 class="mainhead">Links</h2></noscript>
 			<section>
 				<h2>Discord</h2>
                     <p>Join our Discord community for help and support.</p>                

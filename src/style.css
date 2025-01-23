@@ -27,12 +27,11 @@ body {
     border-bottom-color: #232;
 }
 
-nav {
-	display: flex;
+.maintabs {
     border-style: none;
     border-width: 0px;
-    padding: 0px;            
-    padding-top:36px;
+    padding: 0px;    
+    line-height:24px;
 }
 
 /*the thingy under the tabs*/
@@ -40,10 +39,11 @@ nav {
     background-color: #000;
     margin-top: 0px;
     margin-bottom:4px;  
-    height:1.5em;
     line-height: 1.5em;
     padding-right: 0.2em;
-    font-weight: normal;    
+    font-weight: normal; 
+    position:relative;
+    z-index:2;    
 }
 
 /* global button styling */
@@ -56,9 +56,8 @@ a.button, header, section > h2, .mainhead, .border {
     border-bottom-color: #232;
 }
 
-main {
-    display: none;
-    scroll-margin-top: 200px;
+main {    
+    scroll-margin-top: 300px;
 }
 
 section {
@@ -81,7 +80,6 @@ header time {
 
 header, main h2 {
     background-color: #808;    
-    height:1.5em;
     line-height: 1.5em;    
     padding-left: 0.2em;
     padding-right: 0.2em;
@@ -120,6 +118,7 @@ td {
 
 a {
     color: #f0f;
+    white-space: nowrap;
 }
 
 a.button {    
@@ -136,8 +135,6 @@ a.button {
 }
 
 a.button:active {
-    padding-top:3px;
-    padding-bottom:1px;
     padding-left:5px;
     padding-right:3px;
     border-left-color: #232;
@@ -155,15 +152,15 @@ a.button:active {
 }
 
 a.tab,a.activetab {
-    line-height:19px;
-    border-bottom: 0px;
-    padding-bottom:2px;
-    padding-top:1px;
+    line-height: 1.5em;
+    padding-top: 1px;
+    padding-bottom: 3px;
+    position:relative;
+    z-index:1;
 }
 
-a.tab:active {
-    padding-top:2px;
-    padding-bottom:1px;
+a.tab:active,a.activetab:active {
+
     padding-left:5px;
     padding-right:3px;
     border-left-color: #232;

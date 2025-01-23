@@ -8,11 +8,15 @@ for (let i = 0; i < tab_divs.length; i++) {
     button.onclick=function(){select_tab(this);};
     button.draggable=false;
     button.innerHTML='<img class="buticon" src="images/tabs_'+tab_divs[i].id+'.png" draggable="false"/>'+tab_divs[i].id;
-    tab_bar.appendChild(button);
+    tab_bar.appendChild(button);    
+    var span = document.createElement("span");
+    span.style="width:0px;display:inline-block;"
+    span.innerHTML=" ";
+    tab_bar.appendChild(span);    
 }        
 const tab_buttons = document.getElementsByClassName("tab");            
         
-        
+
 //focus initial tab
 const focustab = decodeURI(window.location.hash);        
 if (focustab) {        
@@ -33,3 +37,18 @@ function select_tab(self) {
         else tab_divs[i].style.display = "none";
     }
 }
+
+
+//swap out header layout depending on width
+function adjust_title() {
+    if (document.body.getBoundingClientRect().width<600) {
+        document.getElementById("desktop header").style.display="none";
+        document.getElementById("mobile header").style.display="block";
+        tab_bar.style.textAlign="center";
+    } else {
+        document.getElementById("desktop header").style.display="block";
+        document.getElementById("mobile header").style.display="none";
+        tab_bar.style.textAlign="left";
+    }
+}
+adjust_title();
