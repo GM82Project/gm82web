@@ -64,10 +64,23 @@ section {
     padding-bottom:4px;
 }
 
-body, a.button {
+body, a.button, code {
     background-color: #444;
     font: 14px "Jetbrains","Courier New",monospace;
     color: #fff;
+}
+
+code {
+    background-image: url("images/black.PNG");
+    padding:2px;
+    border-style: solid;
+    border-width: 4px;
+    border-left-color: #232;
+    border-top-color: #232;
+    border-right-color: #676;
+    border-bottom-color: #676;
+    display: block;
+    margin-bottom: -10px;
 }
 
 main header {
@@ -160,7 +173,6 @@ a.tab,a.activetab {
 }
 
 a.tab:active,a.activetab:active {
-
     padding-left:5px;
     padding-right:3px;
     border-left-color: #232;
