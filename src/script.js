@@ -18,13 +18,15 @@ const tab_buttons = document.getElementsByClassName("tab");
         
 
 //focus initial tab
-const focustab = decodeURI(window.location.hash);        
-if (focustab) {        
-    for (let i = 0; i < tab_buttons.length; i++) {
-        if ("#"+tab_buttons[i].innerText == focustab) {select_tab(tab_buttons[i]); break;}
-    }
-} else select_tab(tab_buttons[0]);
-
+function focus_tab() {
+    const focustab = decodeURI(window.location.hash);        
+    if (focustab) {        
+        for (let i = 0; i < tab_buttons.length; i++) {
+            if ("#"+tab_buttons[i].innerText == focustab) {select_tab(tab_buttons[i]); break;}
+        }
+    } else select_tab(tab_buttons[0]);
+}
+focus_tab();
 
 //tab switch function
 function select_tab(self) {
@@ -52,3 +54,9 @@ function adjust_title() {
     }
 }
 adjust_title();
+
+
+//detect navigation and update tab
+window.onhashchange = function() { 
+    focus_tab();
+};
