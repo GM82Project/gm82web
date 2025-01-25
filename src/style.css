@@ -7,7 +7,7 @@
 
 
 html {
-    background-image: url("images/black.PNG");
+    background-image: url("images/black.png");
     overflow: scroll;
 }
 
@@ -71,7 +71,7 @@ body, a.button, code {
 }
 
 code {
-    background-image: url("images/black.PNG");
+    background-image: url("images/black.png");
     padding:2px;
     border-style: solid;
     border-width: 4px;
