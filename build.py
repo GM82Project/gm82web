@@ -6,6 +6,8 @@ from pathlib import Path
 import re
 import shutil
 
+import fontTools.subset as subset
+
 import mistletoe
 from mistletoe.block_token import Heading
 from mistletoe.html_renderer import HtmlRenderer
@@ -17,6 +19,7 @@ NEWS_PLACEHOLDER = '<!-- NEWS PLACEHOLDER -->'
 SRC_DIR = Path('src')
 DIST_DIR = Path('dist')
 INDEX_HTML = 'index.html'
+FONT_GLOB = "fonts/*.ttf"
 
 def generate_posts():
     posts = []
@@ -69,9 +72,21 @@ def insert_posts():
         f.write(html)
 
 def main():
+    # copy files
     shutil.rmtree(DIST_DIR, ignore_errors=True)
     shutil.copytree(SRC_DIR, DIST_DIR)
+    # insert blogposts into html
     insert_posts()
+    # minify font
+    with open(DIST_DIR / INDEX_HTML) as f:
+        chars = {ord(c) for c in f.read()}
+    opts = subset.Options(layout_features='')
+    subsetter = subset.Subsetter(options=opts)
+    subsetter.populate(unicodes=chars)
+    for fn in glob.glob(str(DIST_DIR / FONT_GLOB)):
+        f = subset.load_font(fn, opts, lazy=False)
+        subsetter.subset(f)
+        subset.save_font(f, fn, opts)
 
 
 if __name__ == "__main__":
