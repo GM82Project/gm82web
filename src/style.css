@@ -81,6 +81,7 @@ code {
     border-bottom-color: #676;
     display: block;
     margin-bottom: -10px;
+    overflow:scroll;
 }
 
 main header {

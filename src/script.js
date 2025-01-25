@@ -47,10 +47,14 @@ function adjust_title() {
         document.getElementById("desktop header").style.display="none";
         document.getElementById("mobile header").style.display="block";
         tab_bar.style.textAlign="center";
+        document.body.style.marginTop="0px"
+        document.body.style.marginBottom="0px"
     } else {
         document.getElementById("desktop header").style.display="block";
         document.getElementById("mobile header").style.display="none";
         tab_bar.style.textAlign="left";
+        document.body.style.marginTop="24px"
+        document.body.style.marginBottom="24px"
     }
 }
 adjust_title();
