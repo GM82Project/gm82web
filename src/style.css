@@ -9,6 +9,7 @@
 html {
     background-image: url("images/black.png");
     overflow-y: scroll;
+    scrollbar-color: #676 #232;
 }
 
 
