@@ -3,6 +3,9 @@
 We have a new update ready for download. You can get the new version in the Downloads tab.
 
 ```
+gm82:
+- updated zlib, smaller and faster png saving
+
 room:
 - new plugin system
 - color picker now accepts pasting #rrggbb colors
