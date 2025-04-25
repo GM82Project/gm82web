@@ -22,7 +22,7 @@
         </div>
         <nav class="maintabs" id="Tabs"></nav>
         <h2 class="mainhead">A community-driven update for Legacy Game Maker 8.1</h2>
-        <noscript><p>This website requires javascript to control the tabs, and to adjust to a mobile layout.</p></noscript>
+        <noscript><p>This website requires javascript to control tabbed navigation, and to adjust to a mobile layout.</p></noscript>
         <main class="tabdiv" id="News">
         <noscript><h2 class="mainhead">News</h2></noscript>
             <!-- NEWS PLACEHOLDER -->
@@ -34,34 +34,35 @@
                     <p>8.2 is an unofficial, unendorsed, open-source improvement patch for Game Maker 8.1 that we have been chipping away at since 2019. Main changes include:</p>
                     <br>
                     <list>
-                        <li>New gm82 plaintext file format designed for source-control and external tools</li>
-                        <li>New room editor designed from the ground up with dozens of new features</li>
-                        <li>Fields, a new visual way to use type-checked creation code with the new room editor</li>
-                        <li>File watcher to allow quick reloading from disk when using source control</li>
-                        <li>Many improvements to the basic IDE layout and functionality</li>
+                        <li>New .gm82 plaintext file format designed for Source-Control and external tools</li>
+                        <li>New Room Editor designed from the ground up with dozens of new features</li>
+                        <li>Fields, a new visual way to use type-checked Creation Code with the new Room Editor</li>
+                        <li>File watcher to allow quick-reloading of projects from disk when using Source Control</li>
+                        <li>Many improvements to the IDE appearance and functionality</li>
                         <li>New ability to swap the order of create events and instance creation code</li>
-                        <li>New drag-and-drop actions for Draw Self, User Event, Inherited Event and Inherit Object</li>
-                        <li>Option for setting the default room settings when adding rooms</li>
+                        <li>New Drag-And-Drop actions for Draw Self, User Event, Event Inherited and Inherit Object</li>
+                        <li>Option for default room settings when creating new rooms</li>
                         <li>Re-added support for Bitmap fonts in the IDE and Games</li>
                         <li>Improved performance significantly when saving and loading projects</li>
-                        <li>Improved test run times: we measured 600% faster testing in some projects</li>
+                        <li>Improved compile times: much faster multithreaded building, scales with cpu core count!</li>
                         <li>Improved compression of Game data (around 5-10%)</li>
-                        <li>Dozens of custom-built native extensions extending the functionality of the Game Runner</li>
-                        <li>Removed one frame of in-game input lag</li>
-                        <li>Removed unnecessary DirectPlay installation prompt in Windows 10</li>
-                        <li>Fixed memory leak in the image editor that causes a crash after some time</li>
-                        <li>Fixed massive Game slowdowns when joysticks are disconnected from the system</li>
-                        <li>Fixed Game slowdowns and stuttering on Windows 10 by adjusting the thread scheduler</li>
+                        <li>Improved game startup time: Games with large amounts of objects now finish loading much faster</li>
+                        <li>Dozens of custom-built native extensions adding new functionality to the Game Runner</li>
+                        <li>Removed one frame of in-Game input lag</li>
+                        <li>Removed unnecessary DirectPlay installation prompt in Windows 10+</li>
+                        <li>Fixed memory leak in the Image Editor that causes a crash after some time</li>
+                        <li>Fixed massive Game slowdown when USB Gamepads are added and then removed from the system</li>
+                        <li>Fixed Game slowdown and stuttering on Windows 10+ by adjusting the thread scheduler</li>
                         <li>Fixed IDE access violations and unpredictable corruption of program files</li>
-                        <li>Fixed foreign text turning into mojibake when loading a v8.0 gmk file</li>
-                        <li>Fixed Game crashing when the computer is locked</li>
+                        <li>Fixed foreign text turning into garbage when loading a v8.0 gmk file</li>
+                        <li>Fixed Game crashing when the computer is locked or sleeps</li>
                         <li>Fixed the IDE and Games running out of memory too early</li>
                     </list>
                     <br>
                 <h2>The Team behind 8.2</h2>
                     <table>
                         <tr><td><img loading="lazy" class="border" src="images/floogle.png"/></td><td>Floogle<br>IDE and Runner Reverse Engineer, Extension Programmer, Tool Programmer</p></td></tr>
-                        <tr><td><img loading="lazy" class="border" src="images/renex.png"/></td><td>renex<br>Extension Programmer, UI Designer, Tool Programmer</p></td></tr>
+                        <tr><td><img loading="lazy" class="border" src="images/renex.png"/></td><td>renex<br>UI Designer, Extension Programmer, Tool Programmer</p></td></tr>
                     </table>
                     <br>
                 <h2>The new 8.2 Extensions and Tools</h2>
@@ -79,9 +80,9 @@
                         <li><img loading="lazy" class="buticon" src="images/gex.png"/>GEX<br>Tool for automatically building and installing Extensions, used for rapid development.<br>&nbsp;</li>
                         <li><img loading="lazy" class="buticon" src="images/gltf.png"/>GLTF<br>Load and render complex animated GLTF models with ease in your 3D Games using DirectX 9.<br>&nbsp;</li>
                         <li><img loading="lazy" class="buticon" src="images/joy.png"/>Joystick<br>Wrapper for SDL2 Joystick. Replaces the builtin functions with a much more powerful api, with support for up to 16 concurrent joysticks of almost any model.<br>&nbsp;</li>
-                        <li><img loading="lazy" class="buticon" src="images/live.png"/>Live<br>Edit rooms in realtime using a live connection to the New Room Editor.<br>&nbsp;</li>
+                        <li><img loading="lazy" class="buticon" src="images/live.png"/>Live Room<br>Edit rooms in realtime using a live connection to the New Room Editor.<br>&nbsp;</li>
                         <li><img loading="lazy" class="buticon" src="images/net.png"/>Network<br>Handle Memory Buffers and TCP/UDP Sockets. Also supports basic HTTP functionality.<br>&nbsp;</li>
-                        <li><img loading="lazy" class="buticon" src="images/room.png"/>Room<br>A new room editor for the gm82 project format with dozens of new features. Required for using the new Fields feature, as well as instance and tile scaling, rotation and blending.<br>&nbsp;</li>
+                        <li><img loading="lazy" class="buticon" src="images/room.png"/>Room<br>A new Room Editor for the gm82 project format with dozens of new features. Required for using the new Fields feature, as well as instance and tile scaling, rotation and blending.<br>&nbsp;</li>
                         <li><img loading="lazy" class="buticon" src="images/snd.png"/>Sound<br>A FmodEx wrapper extension replacing the builtin sound api with a powerful sound engine with support for dozens of audio formats and advanced realtime effects. Currently stuck in a commercial license limbo, and provided mostly for compatibility with old projects.<br>&nbsp;</li>
                         <li><img loading="lazy" class="buticon" src="images/video.png"/>Video<br>Add Full Motion Video cutscenes to your Game, with support for multiple video tracks and rendering to surfaces. Includes a Video Encoder tool, and a Video Player for the custom rv2 format.</li>
                     </list>
@@ -99,7 +100,7 @@
                 <h2>Portable Version</h2>
                     <p>Get the program files directly.</p>
                     <a class="button" href="https://www.mediafire.com/file/6l3h4dr7ajj6km2/Game_Maker_8.2_portable.7z/file" target="_blank"><img loading="lazy" class="buticon" src="images/7z.png"/>Download "Portable"</a>
-                    <p>Note that you'll need to manually associate any of the included tools and the program will still use the Windows Registry to store preferences.</p>
+                    <p>Note that the program will still use the Windows Registry to store preferences due to limitations in our modification.</p>
             </section>
             <section>
                 <h2>Microsoft Visual C Runtimes</h2>
@@ -118,8 +119,8 @@
             <section>
                 <h2>Personal Repositories</h2>
                     <p>Various legacy or satellite components of the Project are stored on our personal GitHub pages. You can find links to those below.</p>
-                    <a class="button" href="https://github.com/omicronrex?tab=repositories" target="_blank"><img loading="lazy" class="buticon" src="images/github.png"/>renex</a>
                     <a class="button" href="https://github.com/skyfloogle?tab=repositories" target="_blank"><img loading="lazy" class="buticon" src="images/github.png"/>Floogle</a>
+                    <a class="button" href="https://github.com/omicronrex?tab=repositories" target="_blank"><img loading="lazy" class="buticon" src="images/github.png"/>renex</a>
             </section>
         </main>
         <main class="tabdiv" id="Links">
@@ -130,10 +131,10 @@
                     <table class="border">
                         <tr><td><img loading="lazy" src="images/discord.png"/></td><td>8.2 Project</td><td><a class="button" href="https://discord.gg/CMZKMS4NHM" target="_blank"><img loading="lazy" class="buticon" src="images/tabs_Links.png"/>Join</td></tr>
                     </table>
-                    <p>There, you can get help and support directly from the developers and users of the 8.2 ecosystem, and also find a showcase of other projects using it.</p>                
+                    <p>There, you can get help and support directly from the developers and users of the 8.2 ecosystem, and also find a showcase of various projects using it.</p>                
                     <br>
                 <h2>Links</h2>
-                    <p>Here are some interesting projects created with 8.2.</p>
+                    <p>Here are some interesting and notable projects created with 8.2.</p>
                     <table>
                         <tr><td><img loading="lazy" class="screenshot" src="images/mkf.jpg"/></td><td><a href="https://fusion-fangaming.itch.io/mushroom-kingdom-fusion" target="_blank">Mushroom Kingdom Fusion</a><br>An unofficial, non-profit Mario fan-game crossed over with many other video game franchises.</td></tr>
                         <tr><td><img loading="lazy" class="screenshot" src="images/elp.jpg"/></td><td><a href="https://github.com/elpaudio/elpAudio/" target="_blank">elpAudio</a><br>Simple audio player using FMOD. Supports custom visualisers, plugins, Discord Rich Presence and themes.</td></tr>
