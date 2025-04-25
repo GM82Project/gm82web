@@ -3,8 +3,10 @@
 We have a new update ready for download. You can get the new version in the Downloads tab.
 
 ```
-The Setup has been fixed to correctly set file associations for the Video Player and gmk/gm81/gm82 files.
-However, this requires running the setup as Admin. Don't worry, if you don't have Admin access, you just have to manually associate them using the Windows dialog for opening unknown files.
+The Setup has been fixed to correctly set file associations for the Video Player and
+gmk/gm81/gm82 files. However, this requires running the setup as Admin. Don't worry,
+if you don't have Admin access, you just have to manually associate them using the
+Windows dialog for opening unknown files.
 
 core:
 - new functions ds_list_find_first and _last
