@@ -3,6 +3,9 @@
 We have a new update ready for download. You can get the new version in the Downloads tab.
 
 ```
+-> With this update we've fixed a long-standing issue of the base 8.1 runner where the
+   display driver would always crash upon closing the game.
+
 New to this update: 8.2 Hub
 -> find, test, build, browse, and open source control for your projects
 -> clean unused files and fix broken tree problems in your projects
