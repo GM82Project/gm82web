@@ -16,6 +16,8 @@ from mistletoe.span_token import RawText
 POST_FILENAME_GLOB = "posts/*/*/*/*.md"
 POST_FILENAME_REGEX = r"posts[\\/](\d{4})[\\/](\d\d)[\\/](\d\d)[\\/][^\\/]+\.md"
 NEWS_PLACEHOLDER = '<!-- NEWS PLACEHOLDER -->'
+FAQ_FILENAME = 'posts/faq.md'
+FAQ_PLACEHOLDER = '<!-- FAQ PLACEHOLDER -->'
 SRC_DIR = Path('src')
 DIST_DIR = Path('dist')
 INDEX_HTML = 'index.html'
@@ -61,6 +63,27 @@ def generate_posts():
 
     return posts
 
+
+def generate_faq():
+    faq = []
+
+    renderer = HtmlRenderer()
+    post_filenames = glob.glob(POST_FILENAME_GLOB)
+    post_filenames.sort(reverse=True)
+
+
+    # load the document
+    with open(FAQ_FILENAME) as f:
+        document = mistletoe.Document(f)
+
+    # generate the header
+    header = f'<article><header><h2>Frequently Asked Questions</h2></header>'
+    footer = f'</article>'
+
+    faq.append(header + renderer.render(document))
+
+    return faq
+
 def insert_posts():
     posts = generate_posts()
     with open(DIST_DIR / INDEX_HTML) as f:
@@ -71,12 +94,24 @@ def insert_posts():
     with open(DIST_DIR / INDEX_HTML, "w") as f:
         f.write(html)
 
+def insert_faq():
+    post = generate_faq()
+    with open(DIST_DIR / INDEX_HTML) as f:
+        html = f.read()
+    if FAQ_PLACEHOLDER not in html:
+        raise RuntimeError("faq placeholder not found")
+    html = html.replace(FAQ_PLACEHOLDER, ''.join(post))
+    with open(DIST_DIR / INDEX_HTML, "w") as f:
+        f.write(html)
+
 def main():
     # copy files
     shutil.rmtree(DIST_DIR, ignore_errors=True)
     shutil.copytree(SRC_DIR, DIST_DIR)
     # insert blogposts into html
     insert_posts()
+    # insert faq
+    insert_faq()
     # minify font
     with open(DIST_DIR / INDEX_HTML) as f:
         chars = {ord(c) for c in f.read()}
