@@ -15,5 +15,4 @@ room:
 
 core:
 - new function string_magnitude()
-
 ```
