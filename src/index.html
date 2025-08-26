@@ -34,28 +34,28 @@
                     <p>8.2 is an unofficial, unendorsed, open-source improvement patch for Game Maker 8.1 that we have been chipping away at since 2019. Main changes include:</p>
                     <br>
                     <list>
-                        <li>New .gm82 plaintext file format designed for Source-Control and external tools</li>
+                        <li>New .gm82 human-readable format designed for Source Control and external tools</li>
                         <li>New Room Editor designed from the ground up with dozens of new features</li>
                         <li>Fields, a new visual way to use type-checked Creation Code with the new Room Editor</li>
                         <li>File watcher to allow quick-reloading of projects from disk when using Source Control</li>
-                        <li>Many improvements to the IDE appearance and functionality</li>
-                        <li>New ability to swap the order of create events and instance creation code</li>
+                        <li>Many improvements to the IDE appearance and usability</li>
+                        <li>New option to swap the order of create events and creation code, for compatibility</li>
                         <li>New Drag-And-Drop actions for Draw Self, User Event, Event Inherited and Inherit Object</li>
                         <li>Option for default room settings when creating new rooms</li>
                         <li>Re-added support for Bitmap fonts in the IDE and Games</li>
                         <li>Improved performance significantly when saving and loading projects</li>
                         <li>Improved compile times: much faster multithreaded building, scales with cpu core count!</li>
-                        <li>Improved compression of Game data (around 5-10%)</li>
-                        <li>Improved Game startup: Games with large amounts of objects now finish loading much faster</li>
-                        <li>Dozens of custom-built native extensions adding new functionality to the Game Runner</li>
+                        <li>Improved compression of Game data</li>
+                        <li>Improved Game startup: Games with large amounts of objects now load faster</li>
+                        <li>Dozens of custom-built 8.2 extensions adding new functionality to the Game Runner</li>
                         <li>Removed one frame of in-Game input lag</li>
-                        <li>Removed unnecessary DirectPlay installation prompt in Windows 10+</li>
+                        <li>Removed unnecessary DirectPlay installation prompt on Windows 10/11</li>
                         <li>Fixed memory leak in the Image Editor that causes a crash after some time</li>
-                        <li>Fixed massive Game slowdown when USB Gamepads are added and then removed from the system</li>
-                        <li>Fixed Game slowdown and stuttering on Windows 10+ by adjusting the thread scheduler</li>
+                        <li>Fixed massive Game slowdown when USB Gamepads are disconnected</li>
+                        <li>Fixed Game slowdown and stuttering on Windows 10/11 by adjusting the thread scheduler</li>
                         <li>Fixed IDE access violations and unpredictable corruption of program files</li>
                         <li>Fixed foreign text turning into garbage when loading a v8.0 gmk file</li>
-                        <li>Fixed Game crashing when the computer is locked or sleeps</li>
+                        <li>Fixed Games crashing when the computer is locked or sleeps</li>
                         <li>Fixed the IDE and Games running out of memory too early</li>
                     </list>
                     <br>
@@ -80,8 +80,10 @@
                         <li><img loading="lazy" class="buticon" src="images/dx9.png"/>DirectX9<br>Upgrade your Game's visuals with Shader Programs and fast Vertex Buffer support.<br>&nbsp;</li>
                         <li><img loading="lazy" class="buticon" src="images/gex.png"/>Gex<br>Tool for automatically building and installing Extensions, used for rapid development.<br>&nbsp;</li>
                         <li><img loading="lazy" class="buticon" src="images/gltf.png"/>GLTF<br>Load and render complex animated GLTF models with ease in your 3D Games using DirectX9.<br>&nbsp;</li>
+                        <li><img loading="lazy" class="buticon" src="images/hub.png"/>Hub<br>A central location to organize your Game Maker 8.2 projects.<br>&nbsp;</li>
                         <li><img loading="lazy" class="buticon" src="images/joy.png"/>Joystick<br>Wrapper for SDL2 Joystick. Replaces the builtin functions with a much more powerful api, with support for up to 16 concurrent joysticks of almost any model.<br>&nbsp;</li>
-                        <li><img loading="lazy" class="buticon" src="images/live.png"/>Live Room<br>Edit rooms in realtime using a live connection to the New Room Editor.<br>&nbsp;</li>
+                        <li><img loading="lazy" class="buticon" src="images/mv.png"/>Model Viewer<br>View standard OBJ 3D models and convert them to G3D/G3Z for use with 8.2.<br>&nbsp;</li>
+                        <li><img loading="lazy" class="buticon" src="images/test.png"/>Test<br>Edit rooms in realtime using the New Room Editor. Also contains some debug helpers.<br>&nbsp;</li>
                         <li><img loading="lazy" class="buticon" src="images/room.png"/>Room<br>A brand-new Room Editor for the .gm82 project format with hundreds of new features. Required for using the new Fields feature, as well as instance and tile scaling, rotation and blending.<br>&nbsp;</li>
                         <li><img loading="lazy" class="buticon" src="images/snd.png"/>Sound<br>A FmodEx wrapper extension replacing the builtin sound api with a powerful sound engine with support for dozens of audio formats and advanced realtime effects. Currently stuck in a commercial license limbo, and provided mostly for compatibility with old projects.<br>&nbsp;</li>
                         <li><img loading="lazy" class="buticon" src="images/ui.png"/>User Interface<br>Create and manage hierarchical user interface layouts with fully customizable appearance and behavior.<br>&nbsp;</li>
