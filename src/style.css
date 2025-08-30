@@ -1,7 +1,7 @@
 @font-face {
     font-family: Jetbrains;
     src: local("Jetbrains"),
-    url("fonts/JetBrainsMono-Regular.ttf") format("truetype"),
+        url("fonts/JetBrainsMono-Regular.ttf") format("truetype");
     font-display: swap;
 }
 
@@ -29,6 +29,41 @@ body {
     border-bottom-color: #232;
 }
 
+header .logo {
+    image-rendering: pixelated;
+}
+
+header .wordmark {
+    image-rendering: pixelated;
+}
+
+@media screen and (width >= 600px) {
+    header .logo {
+    float: left;
+    position: relative;
+    z-index: 3;
+    }
+
+    header .wordmark {
+        padding-top: 8px;
+        padding-bottom: 5px;
+    }
+}
+
+@media screen and (width < 600px) {
+    header .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header .wordmark {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 8px;
+    }
+}
+
 .maintabs {
     border-style: none;
     border-width: 0px;
@@ -49,7 +84,7 @@ body {
 }
 
 /* global button styling */
-a.button, header, section > h2, .mainhead, .border {
+a.button, section > h2, .mainhead, .border {
     border-style: solid;
     border-width: 4px;
     border-left-color: #676;
@@ -87,15 +122,15 @@ code {
     overflow-y: hidden;
 }
 
-main header {
+main {
     display: flex;
 }
 
-header time {
+time {
     margin-left: auto;
 }
 
-header, main h2 {
+main h2 {
     background-color: #808;    
     line-height: 1.5em;    
     padding-left: 0.2em;

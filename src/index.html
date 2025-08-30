@@ -11,18 +11,14 @@
         <title>8.2 Project</title>
     </head>
 
-    <body onresize='adjust_title();'>
-        <div id="desktop header" style="display:none;">
-            <img src="images/gm82.png" style="float:left; image-rendering:pixelated; position:relative; z-index:3;"/>
-            <img src="images/header.png" style="image-rendering:pixelated; padding-top: 8px; padding-bottom: 5px;"/>            
-        </div>
-        <div id="mobile header">
-            <img src="images/gm82.png" style="display: block; margin-left: auto; margin-right: auto; image-rendering:pixelated;"/>
-            <img src="images/header.png" style="image-rendering:pixelated; display: block; margin-left: auto; margin-right: auto; padding-bottom: 8px;"/>      
-        </div>
+    <body>
+        <header>
+            <img src="images/gm82.png" class="logo">
+            <img src="images/header.png" class="wordmark">
+        </header>
         <nav class="maintabs" id="Tabs"></nav>
         <h2 class="mainhead">A community-driven update for Legacy Game Maker 8.1</h2>
-        <noscript><p>This website requires javascript to control tabbed navigation, and to adjust to a mobile layout.</p></noscript>
+        <noscript><p>This website requires javascript to control tabbed navigation.</p></noscript>
         <main class="tabdiv" id="News">
         <noscript><h2 class="mainhead">News</h2></noscript>
             <!-- NEWS PLACEHOLDER -->
