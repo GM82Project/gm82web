@@ -84,7 +84,7 @@ header .wordmark {
 }
 
 /* global button styling */
-a.button, section > h2, .mainhead, .border {
+a.button, article > header, section > h2, .mainhead, .border {
     border-style: solid;
     border-width: 4px;
     border-left-color: #676;
@@ -122,7 +122,7 @@ code {
     overflow-y: hidden;
 }
 
-main {
+main, article > header {
     display: flex;
 }
 
@@ -130,7 +130,7 @@ time {
     margin-left: auto;
 }
 
-main h2 {
+main h2, article > header {
     background-color: #808;    
     line-height: 1.5em;    
     padding-left: 0.2em;
