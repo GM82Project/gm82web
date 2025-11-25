@@ -85,6 +85,9 @@
                         <li><img loading="lazy" class="buticon" src="images/ui.png"/>User Interface<br>Create and manage hierarchical user interface layouts with fully customizable appearance and behavior.<br>&nbsp;</li>
                         <li><img loading="lazy" class="buticon" src="images/video.png"/>Video<br>Add Full Motion Video cutscenes to your Game, with support for multiple video tracks and rendering to surfaces. Includes a Video Encoder tool, and a Video Player for the custom .rv2 format.</li>
                     </list>
+                <h2>Extension Dependency Graph</h2>
+                    <p>Some of our extensions are dependant on each other. When you add an extension to a project, all of its dependencies will automatically be present when the game is compiled. For example, a game using Video will contain DirectX9, Buffer and Core. Additionally, Audio and Sound are mutually exclusive because of function name conflicts.</p><p>Angle, Console and Drag do not have any dependencies.</p>
+                    <img loading="lazy" src="images/graph.png" style="margin-left: auto; margin-right: auto; display: block;"/>
             </section>
         </main>
         <main class="tabdiv" id="FAQ">
