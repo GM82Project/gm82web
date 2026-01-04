@@ -13,6 +13,8 @@ from mistletoe.block_token import Heading
 from mistletoe.html_renderer import HtmlRenderer
 from mistletoe.span_token import RawText
 
+from PIL import Image
+
 POST_FILENAME_GLOB = "posts/*/*/*/*.md"
 POST_FILENAME_REGEX = r"posts[\\/](\d{4})[\\/](\d\d)[\\/](\d\d)[\\/][^\\/]+\.md"
 NEWS_PLACEHOLDER = '<!-- NEWS PLACEHOLDER -->'
@@ -104,6 +106,17 @@ def insert_faq():
     with open(DIST_DIR / INDEX_HTML, "w") as f:
         f.write(html)
 
+def size_images():
+    with open(DIST_DIR / INDEX_HTML) as f:
+        html = f.read()
+    for fn in re.findall('<img [^>/]*src="(images/[^.]+.png)"', html):
+        im = Image.open(DIST_DIR / fn)
+        w, h = im.size
+        html = html.replace(f'src="{fn}"', f'width="{w}" height="{h}" src="{fn}"')
+    with open(DIST_DIR / INDEX_HTML, "w") as f:
+        f.write(html)
+    
+
 def main():
     # copy files
     shutil.rmtree(DIST_DIR, ignore_errors=True)
@@ -112,6 +125,8 @@ def main():
     insert_posts()
     # insert faq
     insert_faq()
+    # insert image sizes
+    size_images()
     # minify font
     with open(DIST_DIR / INDEX_HTML) as f:
         chars = {ord(c) for c in f.read()}
