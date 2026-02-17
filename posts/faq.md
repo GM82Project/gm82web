@@ -1,7 +1,7 @@
 ### Is this official? Can I sell games made with it?
 > No, this is a community mod. We aren't affiliated with YoYoGames or Opera. We're just a couple of hobbyists having fun improving our own workflows. As any modification of old software, you are bound to the inability to purchase it, and we exist within such gray area, which means it should be fine for non-commercial and educational uses only. If you're looking to make money, we recommend using the [latest version of GameMaker](https://gamemaker.io).
 ### My antivirus says 8.2 has Wacatac!ml.
-> AV programs don't like modified, unsigned executables. We encourage you to check [our source code](#Source) to see that it's safe for yourself.
+> AV programs don't like modified, unsigned executables, and additionally our setup engine (NSIS) is typically used for malware distribution. We encourage you to check [our source code](#Source).
 ### Do you support Linux? Old Windows? Etc.
 > On Linux, the 8.2 IDE and the games run mostly fine under Wine or especially Proton, with most people reporting little to no issues. As for Windows, 7 and later are actively supported. Compiled games may work as far back as Windows XP, depending on which extensions are enabled, but we don't actively support XP or Vista. If you'd like to report a bug, head over to our [GitHub](#Source) or [Discord](#Links).
 ### Why 8.2? Isn't the last version of legacy Game Maker 8.1? Also why purple?
