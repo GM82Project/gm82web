@@ -7,8 +7,3 @@ name = "pypi"
 mistletoe = "*"
 fonttools = "*"
 pillow = "*"
-
-[dev-packages]
-
-[requires]
-python_version = "3.13"
