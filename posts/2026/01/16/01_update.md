@@ -1,4 +1,4 @@
-## Setup Update
+## Setup Updated
 
 We have a new update ready for download. You can get the new version in the Downloads tab.
 
