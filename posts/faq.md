@@ -1,7 +1,7 @@
 ### Is this official? Can I sell games made with it?
 > No, this is a community mod. We aren't affiliated with YoYoGames, PlayTech, Opera etc. We're just a bunch of hobbyists having fun improving our own workflows. As any modification of old software, you are bound to the inability to purchase it, and we exist within such gray area, which means it should be fine only for non-commercial and educational uses. If you're looking to make money, we recommend using the [latest version of GameMaker](https://gamemaker.io).
 ### Is this project AI-generated?
-> Most definitely not. While we can't verify the full origin of code contributed to our github by third parties, we do manually review everything when merging. All of our internal extension and injection code is handwritten by the two of us. We do not use LLMs to generate any code, documentation, or website materials. We accept typo fix pull requests.
+> No. While we can't verify the full origin of code contributed to our github by third parties, we do manually review everything when merging. All of our internal extension and injection code is handwritten by the two of us. We do not use LLMs to generate any code, documentation, or website materials. We accept typo fix pull requests.
 ### My antivirus says 8.2 has Wacatac!ml.
 > Antivirus software doesn't like modified, unsigned executables, and additionally our setup engine (NSIS) is typically used for malware distribution. We encourage you to check [our source code](#Source). You're free to ask us in our [Discord](#Links) if you want further clarification.
 ### Do you support Linux? Old Windows? Etc.
