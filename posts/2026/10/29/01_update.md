@@ -3,7 +3,8 @@
 We have a new update ready for download. You can get the new version in the Downloads tab.
 
 ```
-This update fixes an important bug where the Room Editor would delete some tiles when loading a room.
+This update fixes an important bug where the Room Editor would delete some tiles
+when loading a room.
 
 gm82:
 - ide is now dpi-aware to fix some scaling issues with very high zoom levels

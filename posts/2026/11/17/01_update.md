@@ -35,7 +35,7 @@ room:
 - paths added from the room editor are now placed in a subfolder
 
 dx9:
-- fixed consistent floating point exceptions at game start in specific pcs
+- [TheBiob] fixed consistent floating point exceptions at game start in specific pcs
 - made each function that produces a 3d-vector return the x coordinate
   -> this allows you to inline them in function calls.
 - made the postdraw script receive the application surface as argument[0]
